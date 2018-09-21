@@ -14,6 +14,7 @@
 		1F63FF7A21550FD1000D5AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F63FF7821550FD1000D5AC0 /* LaunchScreen.storyboard */; };
 		1F63FF8521550FD1000D5AC0 /* FilmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF8421550FD1000D5AC0 /* FilmTests.swift */; };
 		1F63FF9021550FD1000D5AC0 /* FilmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF8F21550FD1000D5AC0 /* FilmUITests.swift */; };
+		1F63FFA421551362000D5AC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FFA321551362000D5AC0 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1F63FF8B21550FD1000D5AC0 /* FilmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F63FF8F21550FD1000D5AC0 /* FilmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmUITests.swift; sourceTree = "<group>"; };
 		1F63FF9121550FD1000D5AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F63FFA321551362000D5AC0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				1F63FF7621550FD1000D5AC0 /* Assets.xcassets */,
 				1F63FF7821550FD1000D5AC0 /* LaunchScreen.storyboard */,
 				1F63FF7B21550FD1000D5AC0 /* Info.plist */,
+				1F63FFA321551362000D5AC0 /* HomeViewController.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				1F63FF7221550FCC000D5AC0 /* ViewController.swift in Sources */,
 				1F63FF7021550FCC000D5AC0 /* AppDelegate.swift in Sources */,
+				1F63FFA421551362000D5AC0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SH87652J75;
 				INFOPLIST_FILE = Film/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SH87652J75;
 				INFOPLIST_FILE = Film/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
