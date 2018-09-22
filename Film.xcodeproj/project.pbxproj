@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F23835C215568CA006FE36A /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23835B215568CA006FE36A /* Film.swift */; };
+		1F23835E215576EC006FE36A /* ItemFilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23835D215576EC006FE36A /* ItemFilmTableViewCell.swift */; };
 		1F63FF7021550FCC000D5AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF6F21550FCC000D5AC0 /* AppDelegate.swift */; };
 		1F63FF7221550FCC000D5AC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF7121550FCC000D5AC0 /* ViewController.swift */; };
 		1F63FF7521550FCC000D5AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F63FF7321550FCC000D5AC0 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F23835B215568CA006FE36A /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		1F23835D215576EC006FE36A /* ItemFilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilmTableViewCell.swift; sourceTree = "<group>"; };
 		1F63FF6C21550FCC000D5AC0 /* Film.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Film.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F63FF6F21550FCC000D5AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F63FF7121550FCC000D5AC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				1F63FF7821550FD1000D5AC0 /* LaunchScreen.storyboard */,
 				1F63FF7B21550FD1000D5AC0 /* Info.plist */,
 				1F63FFA321551362000D5AC0 /* HomeViewController.swift */,
+				1F23835B215568CA006FE36A /* Film.swift */,
+				1F23835D215576EC006FE36A /* ItemFilmTableViewCell.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F63FF7221550FCC000D5AC0 /* ViewController.swift in Sources */,
+				1F23835C215568CA006FE36A /* Film.swift in Sources */,
+				1F23835E215576EC006FE36A /* ItemFilmTableViewCell.swift in Sources */,
 				1F63FF7021550FCC000D5AC0 /* AppDelegate.swift in Sources */,
 				1F63FFA421551362000D5AC0 /* HomeViewController.swift in Sources */,
 			);

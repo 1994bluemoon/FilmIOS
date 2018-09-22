@@ -8,20 +8,33 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    @IBOutlet weak var lbTitle: UILabel!
-    @IBOutlet weak var lbDes: UILabel!
-    @IBOutlet weak var imgLogo: UIImageView!
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tbView: UITableView!
+    var films: [Film] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let film = Film()
+        films = film.getNowPlayingFilms()
+        tbView.reloadData()
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return films.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemFilmTableViewCell", for: indexPath) as! ItemFilmTableViewCell
+        cell.film = films[indexPath.row]
+        return cell
     }
     
     @IBAction func `switch`(_ sender: Any) {
         
     }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +44,8 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //54715436e1813692f121feb9fd97709e
 
 }
+
