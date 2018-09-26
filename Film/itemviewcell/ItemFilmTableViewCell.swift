@@ -21,16 +21,16 @@ class ItemFilmTableViewCell: UITableViewCell {
     }
     
     func updateUI(){
-        self.lbTitle.text = film?.Description
-        self.lbDes.text = film?.Title
-        let placeholder: UIImage? = nil
-        self.imLogo.setImage(from : URL(string: "https://image.tmdb.org/t/p/w50\(film?.LogoPath ?? "aa")")!, withPlaceholder: placeholder)
+        self.lbTitle.text = film?.Title
+        self.lbDes.text = film?.Description
+        let placeholder: UIImage? = imLogo.image
+        self.imLogo.setImage(from : URL(string: "https://image.tmdb.org/t/p/w500\(film?.LogoPath ?? "aa")")!, withPlaceholder: placeholder)
     }
 
 }
 
     extension UIImageView {
-        func setImage(from url: URL, withPlaceholder placeholder: UIImage? = nil) {
+        func setImage(from url: URL, withPlaceholder placeholder: UIImage?) {
             self.image = placeholder
             URLSession.shared.dataTask(with: url) {  (data, _, _) in
                 if let data = data {
