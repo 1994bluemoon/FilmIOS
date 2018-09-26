@@ -15,7 +15,6 @@
 		1F499FC221591B5B00D0D3A2 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F499FC121591B5B00D0D3A2 /* TitleTableViewCell.swift */; };
 		1F499FC421591B6D00D0D3A2 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F499FC321591B6D00D0D3A2 /* DescriptionTableViewCell.swift */; };
 		1F63FF7021550FCC000D5AC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF6F21550FCC000D5AC0 /* AppDelegate.swift */; };
-		1F63FF7221550FCC000D5AC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF7121550FCC000D5AC0 /* ViewController.swift */; };
 		1F63FF7521550FCC000D5AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F63FF7321550FCC000D5AC0 /* Main.storyboard */; };
 		1F63FF7721550FD1000D5AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F63FF7621550FD1000D5AC0 /* Assets.xcassets */; };
 		1F63FF7A21550FD1000D5AC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F63FF7821550FD1000D5AC0 /* LaunchScreen.storyboard */; };
@@ -52,7 +51,6 @@
 		1F499FC321591B6D00D0D3A2 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		1F63FF6C21550FCC000D5AC0 /* Film.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Film.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F63FF6F21550FCC000D5AC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F63FF7121550FCC000D5AC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F63FF7421550FCC000D5AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F63FF7621550FD1000D5AC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F63FF7921550FD1000D5AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F3272B3215BE56F00492AD3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1F23835B215568CA006FE36A /* Film.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		1F3272B4215BE5C300492AD3 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1F63FF7321550FCC000D5AC0 /* Main.storyboard */,
+				1F63FF7821550FD1000D5AC0 /* LaunchScreen.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
 		1F499FBE21591ADA00D0D3A2 /* itemviewcell */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,15 +142,12 @@
 			isa = PBXGroup;
 			children = (
 				1F63FF6F21550FCC000D5AC0 /* AppDelegate.swift */,
-				1F63FF7121550FCC000D5AC0 /* ViewController.swift */,
-				1F63FF7321550FCC000D5AC0 /* Main.storyboard */,
+				1F3272B4215BE5C300492AD3 /* storyboard */,
 				1F63FF7621550FD1000D5AC0 /* Assets.xcassets */,
-				1F63FF7821550FD1000D5AC0 /* LaunchScreen.storyboard */,
 				1F63FF7B21550FD1000D5AC0 /* Info.plist */,
 				1FEF1A012157C49600F4F494 /* controller */,
-				1F23835B215568CA006FE36A /* Film.swift */,
+				1F3272B3215BE56F00492AD3 /* model */,
 				1F499FBE21591ADA00D0D3A2 /* itemviewcell */,
-				1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";
@@ -164,6 +176,7 @@
 				1F63FFA321551362000D5AC0 /* HomeViewController.swift */,
 				1FEF1A022157C4D900F4F494 /* DetailViewController.swift */,
 				1F499FBC215919CF00D0D3A2 /* ChiTietViewController.swift */,
+				1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -302,7 +315,6 @@
 				1F499FC221591B5B00D0D3A2 /* TitleTableViewCell.swift in Sources */,
 				1F499FBB21590B2900D0D3A2 /* FakeViewController.swift in Sources */,
 				1F499FC421591B6D00D0D3A2 /* DescriptionTableViewCell.swift in Sources */,
-				1F63FF7221550FCC000D5AC0 /* ViewController.swift in Sources */,
 				1F23835C215568CA006FE36A /* Film.swift in Sources */,
 				1F499FC021591B4000D0D3A2 /* BannerTableViewCell.swift in Sources */,
 				1F23835E215576EC006FE36A /* ItemFilmTableViewCell.swift in Sources */,
