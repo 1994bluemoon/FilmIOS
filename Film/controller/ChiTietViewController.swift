@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChiTietViewController: UIViewController {
+class ChiTietViewController: UIViewController, DMyDelegate {
 
     @IBOutlet weak var tbContent: UITableView!
     
@@ -20,6 +20,17 @@ class ChiTietViewController: UIViewController {
         
         tbContent.estimatedRowHeight = 100
         tbContent.rowHeight = UITableView.automaticDimension
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "BookTicketViewController" {
+            let mh = segue.destination as! BookTicketViewController
+            mh.film = sender as! Film
+        }
+    }
+    
+    func bookTicketClicked() {
+        performSegue(withIdentifier: "BookTicketViewController", sender: self.film)
     }
     
     func reload(){
@@ -81,6 +92,7 @@ extension ChiTietViewController: UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TitleTableViewCell") as! TitleTableViewCell
                 cell.lbTitle.text = self.film.Title
                 cell.imPoster.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(self.film.LogoPath ?? "")")!, withPlaceholder: cell.imPoster.image)
+                cell.myDelegate = self
                 return cell
             default:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell") as! DescriptionTableViewCell

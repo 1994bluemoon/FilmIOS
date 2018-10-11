@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1AAA952164E5410043360B /* DMyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1AAA942164E5410043360B /* DMyDelegate.swift */; };
+		1F1AAA972164E70B0043360B /* BookTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1AAA962164E70B0043360B /* BookTicketViewController.swift */; };
+		1F1AAA9D2164F5090043360B /* CellTinhTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1AAA9C2164F5090043360B /* CellTinhTableViewCell.swift */; };
 		1F23835C215568CA006FE36A /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23835B215568CA006FE36A /* Film.swift */; };
 		1F23835E215576EC006FE36A /* ItemFilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23835D215576EC006FE36A /* ItemFilmTableViewCell.swift */; };
+		1F35A050216791480005C9DA /* FilmTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35A04F216791480005C9DA /* FilmTicket.swift */; };
+		1F35A052216792F60005C9DA /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35A051216792F60005C9DA /* TicketTableViewCell.swift */; };
+		1F35A054216793AF0005C9DA /* FilmTicketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35A053216793AF0005C9DA /* FilmTicketDelegate.swift */; };
+		1F37364821652CDE00759B37 /* BottomNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F37364721652CDE00759B37 /* BottomNumberTableViewCell.swift */; };
 		1F499FBB21590B2900D0D3A2 /* FakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */; };
 		1F499FBD215919CF00D0D3A2 /* ChiTietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F499FBC215919CF00D0D3A2 /* ChiTietViewController.swift */; };
 		1F499FC021591B4000D0D3A2 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F499FBF21591B4000D0D3A2 /* BannerTableViewCell.swift */; };
@@ -42,8 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F1AAA942164E5410043360B /* DMyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMyDelegate.swift; sourceTree = "<group>"; };
+		1F1AAA962164E70B0043360B /* BookTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTicketViewController.swift; sourceTree = "<group>"; };
+		1F1AAA9C2164F5090043360B /* CellTinhTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTinhTableViewCell.swift; sourceTree = "<group>"; };
 		1F23835B215568CA006FE36A /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		1F23835D215576EC006FE36A /* ItemFilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFilmTableViewCell.swift; sourceTree = "<group>"; };
+		1F35A04F216791480005C9DA /* FilmTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTicket.swift; sourceTree = "<group>"; };
+		1F35A051216792F60005C9DA /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
+		1F35A053216793AF0005C9DA /* FilmTicketDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTicketDelegate.swift; sourceTree = "<group>"; };
+		1F37364721652CDE00759B37 /* BottomNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNumberTableViewCell.swift; sourceTree = "<group>"; };
 		1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeViewController.swift; sourceTree = "<group>"; };
 		1F499FBC215919CF00D0D3A2 /* ChiTietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietViewController.swift; sourceTree = "<group>"; };
 		1F499FBF21591B4000D0D3A2 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				1F23835B215568CA006FE36A /* Film.swift */,
+				1F35A04F216791480005C9DA /* FilmTicket.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -114,6 +129,9 @@
 				1F499FBF21591B4000D0D3A2 /* BannerTableViewCell.swift */,
 				1F499FC121591B5B00D0D3A2 /* TitleTableViewCell.swift */,
 				1F499FC321591B6D00D0D3A2 /* DescriptionTableViewCell.swift */,
+				1F1AAA9C2164F5090043360B /* CellTinhTableViewCell.swift */,
+				1F37364721652CDE00759B37 /* BottomNumberTableViewCell.swift */,
+				1F35A051216792F60005C9DA /* TicketTableViewCell.swift */,
 			);
 			path = itemviewcell;
 			sourceTree = "<group>";
@@ -148,6 +166,8 @@
 				1FEF1A012157C49600F4F494 /* controller */,
 				1F3272B3215BE56F00492AD3 /* model */,
 				1F499FBE21591ADA00D0D3A2 /* itemviewcell */,
+				1F1AAA942164E5410043360B /* DMyDelegate.swift */,
+				1F35A053216793AF0005C9DA /* FilmTicketDelegate.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";
@@ -177,6 +197,7 @@
 				1FEF1A022157C4D900F4F494 /* DetailViewController.swift */,
 				1F499FBC215919CF00D0D3A2 /* ChiTietViewController.swift */,
 				1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */,
+				1F1AAA962164E70B0043360B /* BookTicketViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -314,14 +335,21 @@
 			files = (
 				1F499FC221591B5B00D0D3A2 /* TitleTableViewCell.swift in Sources */,
 				1F499FBB21590B2900D0D3A2 /* FakeViewController.swift in Sources */,
+				1F35A054216793AF0005C9DA /* FilmTicketDelegate.swift in Sources */,
 				1F499FC421591B6D00D0D3A2 /* DescriptionTableViewCell.swift in Sources */,
+				1F1AAA972164E70B0043360B /* BookTicketViewController.swift in Sources */,
 				1F23835C215568CA006FE36A /* Film.swift in Sources */,
 				1F499FC021591B4000D0D3A2 /* BannerTableViewCell.swift in Sources */,
 				1F23835E215576EC006FE36A /* ItemFilmTableViewCell.swift in Sources */,
+				1F35A050216791480005C9DA /* FilmTicket.swift in Sources */,
 				1FEF1A032157C4D900F4F494 /* DetailViewController.swift in Sources */,
+				1F35A052216792F60005C9DA /* TicketTableViewCell.swift in Sources */,
 				1F63FF7021550FCC000D5AC0 /* AppDelegate.swift in Sources */,
 				1F63FFA421551362000D5AC0 /* HomeViewController.swift in Sources */,
 				1F499FBD215919CF00D0D3A2 /* ChiTietViewController.swift in Sources */,
+				1F1AAA9D2164F5090043360B /* CellTinhTableViewCell.swift in Sources */,
+				1F37364821652CDE00759B37 /* BottomNumberTableViewCell.swift in Sources */,
+				1F1AAA952164E5410043360B /* DMyDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

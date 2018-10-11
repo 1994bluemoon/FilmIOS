@@ -14,5 +14,9 @@ class TitleTableViewCell: UITableViewCell {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var btBookTicket: UIButton!
     
-
+    weak var myDelegate: DMyDelegate?
+    
+    @IBAction func booked(_ sender: Any) {
+        myDelegate?.bookTicketClicked()
+    } 
 }
