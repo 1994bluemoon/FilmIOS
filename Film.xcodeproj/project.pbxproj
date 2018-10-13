@@ -15,7 +15,6 @@
 		1F35A050216791480005C9DA /* FilmTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35A04F216791480005C9DA /* FilmTicket.swift */; };
 		1F35A052216792F60005C9DA /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35A051216792F60005C9DA /* TicketTableViewCell.swift */; };
 		1F35A054216793AF0005C9DA /* FilmTicketDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F35A053216793AF0005C9DA /* FilmTicketDelegate.swift */; };
-		1F37364821652CDE00759B37 /* BottomNumberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F37364721652CDE00759B37 /* BottomNumberTableViewCell.swift */; };
 		1F499FBB21590B2900D0D3A2 /* FakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */; };
 		1F499FBD215919CF00D0D3A2 /* ChiTietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F499FBC215919CF00D0D3A2 /* ChiTietViewController.swift */; };
 		1F499FC021591B4000D0D3A2 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F499FBF21591B4000D0D3A2 /* BannerTableViewCell.swift */; };
@@ -28,6 +27,8 @@
 		1F63FF8521550FD1000D5AC0 /* FilmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF8421550FD1000D5AC0 /* FilmTests.swift */; };
 		1F63FF9021550FD1000D5AC0 /* FilmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF8F21550FD1000D5AC0 /* FilmUITests.swift */; };
 		1F63FFA421551362000D5AC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FFA321551362000D5AC0 /* HomeViewController.swift */; };
+		1FE19CDA2170E67F006B87BD /* UpComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE19CD92170E67F006B87BD /* UpComingViewController.swift */; };
+		1FE19CDC2170E9F6006B87BD /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE19CDB2170E9F6006B87BD /* MainTabBarViewController.swift */; };
 		1FEF1A032157C4D900F4F494 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1A022157C4D900F4F494 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +58,6 @@
 		1F35A04F216791480005C9DA /* FilmTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTicket.swift; sourceTree = "<group>"; };
 		1F35A051216792F60005C9DA /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
 		1F35A053216793AF0005C9DA /* FilmTicketDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTicketDelegate.swift; sourceTree = "<group>"; };
-		1F37364721652CDE00759B37 /* BottomNumberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNumberTableViewCell.swift; sourceTree = "<group>"; };
 		1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeViewController.swift; sourceTree = "<group>"; };
 		1F499FBC215919CF00D0D3A2 /* ChiTietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiTietViewController.swift; sourceTree = "<group>"; };
 		1F499FBF21591B4000D0D3A2 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
@@ -76,6 +76,8 @@
 		1F63FF8F21550FD1000D5AC0 /* FilmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmUITests.swift; sourceTree = "<group>"; };
 		1F63FF9121550FD1000D5AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F63FFA321551362000D5AC0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1FE19CD92170E67F006B87BD /* UpComingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingViewController.swift; sourceTree = "<group>"; };
+		1FE19CDB2170E9F6006B87BD /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		1FEF1A022157C4D900F4F494 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +132,6 @@
 				1F499FC121591B5B00D0D3A2 /* TitleTableViewCell.swift */,
 				1F499FC321591B6D00D0D3A2 /* DescriptionTableViewCell.swift */,
 				1F1AAA9C2164F5090043360B /* CellTinhTableViewCell.swift */,
-				1F37364721652CDE00759B37 /* BottomNumberTableViewCell.swift */,
 				1F35A051216792F60005C9DA /* TicketTableViewCell.swift */,
 			);
 			path = itemviewcell;
@@ -198,6 +199,8 @@
 				1F499FBC215919CF00D0D3A2 /* ChiTietViewController.swift */,
 				1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */,
 				1F1AAA962164E70B0043360B /* BookTicketViewController.swift */,
+				1FE19CD92170E67F006B87BD /* UpComingViewController.swift */,
+				1FE19CDB2170E9F6006B87BD /* MainTabBarViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -337,18 +340,19 @@
 				1F499FBB21590B2900D0D3A2 /* FakeViewController.swift in Sources */,
 				1F35A054216793AF0005C9DA /* FilmTicketDelegate.swift in Sources */,
 				1F499FC421591B6D00D0D3A2 /* DescriptionTableViewCell.swift in Sources */,
+				1FE19CDA2170E67F006B87BD /* UpComingViewController.swift in Sources */,
 				1F1AAA972164E70B0043360B /* BookTicketViewController.swift in Sources */,
 				1F23835C215568CA006FE36A /* Film.swift in Sources */,
 				1F499FC021591B4000D0D3A2 /* BannerTableViewCell.swift in Sources */,
 				1F23835E215576EC006FE36A /* ItemFilmTableViewCell.swift in Sources */,
 				1F35A050216791480005C9DA /* FilmTicket.swift in Sources */,
 				1FEF1A032157C4D900F4F494 /* DetailViewController.swift in Sources */,
+				1FE19CDC2170E9F6006B87BD /* MainTabBarViewController.swift in Sources */,
 				1F35A052216792F60005C9DA /* TicketTableViewCell.swift in Sources */,
 				1F63FF7021550FCC000D5AC0 /* AppDelegate.swift in Sources */,
 				1F63FFA421551362000D5AC0 /* HomeViewController.swift in Sources */,
 				1F499FBD215919CF00D0D3A2 /* ChiTietViewController.swift in Sources */,
 				1F1AAA9D2164F5090043360B /* CellTinhTableViewCell.swift in Sources */,
-				1F37364821652CDE00759B37 /* BottomNumberTableViewCell.swift in Sources */,
 				1F1AAA952164E5410043360B /* DMyDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

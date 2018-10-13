@@ -27,50 +27,8 @@ class TicketTableViewCell: UITableViewCell {
     
     @IBAction func btClicked(_ sender: Any) {
         if let sender = sender as? UIButton {
-            switch sender {
-            case bt1:
-                let ticket = rowTickets[0]
-                if  !isAlreadyBook(ticket: ticket) {
-                    delegate?.handleChairClicked(ticket: ticket, rowPos: rowPos)
-                }
-            case bt2:
-                let ticket = rowTickets[1]
-                if  !isAlreadyBook(ticket: ticket) {
-                    delegate?.handleChairClicked(ticket: ticket, rowPos: rowPos)
-                }
-            case bt3:
-                let ticket = rowTickets[2]
-                if  !isAlreadyBook(ticket: ticket) {
-                    delegate?.handleChairClicked(ticket: ticket, rowPos: rowPos)
-                }
-            case bt4:
-                let ticket = rowTickets[3]
-                if  !isAlreadyBook(ticket: ticket) {
-                    delegate?.handleChairClicked(ticket: ticket, rowPos: rowPos)
-                }
-            case bt5:
-                let ticket = rowTickets[4]
-                if  !isAlreadyBook(ticket: ticket) {
-                    delegate?.handleChairClicked(ticket: ticket, rowPos: rowPos)
-                }
-            case bt6:
-                let ticket = rowTickets[5]
-                if  !isAlreadyBook(ticket: ticket) {
-                    delegate?.handleChairClicked(ticket: ticket, rowPos: rowPos)
-                }
-            case bt7:
-                let ticket = rowTickets[6]
-                if  !isAlreadyBook(ticket: ticket) {
-                    delegate?.handleChairClicked(ticket: ticket, rowPos: rowPos)
-                }
-            case bt8:
-                let ticket = rowTickets[7]
-                if  !isAlreadyBook(ticket: ticket) {
-                    delegate?.handleChairClicked(ticket: ticket, rowPos: rowPos)
-                }
-            default:
-                return
-            }
+            let ticket = rowTickets[sender.tag]
+            delegate?.handleChairClicked(ticket: ticket, rowPos: rowPos)
         }
     }
     
@@ -80,7 +38,11 @@ class TicketTableViewCell: UITableViewCell {
         self.bookings = bookingTicket
         self.alreadyBooks = alreadyBook
         setCaption()
-        setChairColor()
+        bindTicketToButton()
+    }
+    
+    private func isContains(ticket: FilmTicket, inList: [FilmTicket]) -> Bool {
+        return inList.contains(where: {$0.ticketId == ticket.ticketId})
     }
     
     private func setCaption(){
@@ -88,85 +50,43 @@ class TicketTableViewCell: UITableViewCell {
         tvTitle.text = caption
     }
     
-    private func isAlreadyBook(ticket: FilmTicket) -> Bool {
-        return alreadyBooks.contains(where: {$0.ticketId == ticket.ticketId})
+    private func bindTicketToButton() {
+        for (index, item) in rowTickets.enumerated() {
+            let bt = getButtonByTag(tag: index)
+            setChairColor(ticket: item, button: bt)
+        }
     }
     
-    private func isBooking(ticket: FilmTicket) -> Bool {
-        return bookings.contains(where: {$0.ticketId == ticket.ticketId})
+    private func setChairColor(ticket: FilmTicket, button: UIButton) {
+        if isContains(ticket: ticket, inList: alreadyBooks) {
+            button.backgroundColor = UIColor.purple
+        } else if isContains(ticket: ticket, inList: bookings) {
+            button.backgroundColor = UIColor.green
+        } else {
+            button.backgroundColor = ticket.defaultColor
+        }
     }
     
-    private func setChairColor() {
-        let ticket1 = rowTickets[0]
-        if isAlreadyBook(ticket: ticket1) {
-            bt1.backgroundColor = UIColor.purple
-        } else if isBooking(ticket: ticket1){
-            bt1.backgroundColor = UIColor.green
-        } else {
-            bt1.backgroundColor = ticket1.defaultColor
-        }
-    
-        let ticket2 = rowTickets[1]
-        if isAlreadyBook(ticket: ticket2) {
-            bt2.backgroundColor = UIColor.purple
-        } else if isBooking(ticket: ticket2){
-            bt2.backgroundColor = UIColor.green
-        } else {
-            bt2.backgroundColor = ticket2.defaultColor
-        }
-        
-        let ticket3 = rowTickets[2]
-        if isAlreadyBook(ticket: ticket3) {
-            bt3.backgroundColor = UIColor.purple
-        } else if isBooking(ticket: ticket3){
-            bt3.backgroundColor = UIColor.green
-        } else {
-            bt3.backgroundColor = ticket3.defaultColor
-        }
-        
-        let ticket4 = rowTickets[3]
-        if isAlreadyBook(ticket: ticket4) {
-            bt4.backgroundColor = UIColor.purple
-        } else if isBooking(ticket: ticket4){
-            bt4.backgroundColor = UIColor.green
-        } else {
-            bt4.backgroundColor = ticket4.defaultColor
-        }
-        
-        let ticket5 = rowTickets[4]
-        if isAlreadyBook(ticket: ticket5) {
-            bt5.backgroundColor = UIColor.purple
-        } else if isBooking(ticket: ticket5){
-            bt5.backgroundColor = UIColor.green
-        } else {
-            bt5.backgroundColor = ticket5.defaultColor
-        }
-        
-        let ticket6 = rowTickets[5]
-        if isAlreadyBook(ticket: ticket6) {
-            bt6.backgroundColor = UIColor.purple
-        } else if isBooking(ticket: ticket6){
-            bt6.backgroundColor = UIColor.green
-        } else {
-            bt6.backgroundColor = ticket6.defaultColor
-        }
-        
-        let ticket7 = rowTickets[6]
-        if isAlreadyBook(ticket: ticket7) {
-            bt7.backgroundColor = UIColor.purple
-        } else if isBooking(ticket: ticket7){
-            bt7.backgroundColor = UIColor.green
-        } else {
-            bt7.backgroundColor = ticket7.defaultColor
-        }
-        
-        let ticket8 = rowTickets[7]
-        if isAlreadyBook(ticket: ticket8) {
-            bt8.backgroundColor = UIColor.purple
-        } else if isBooking(ticket: ticket8){
-            bt8.backgroundColor = UIColor.green
-        } else {
-            bt8.backgroundColor = ticket8.defaultColor
+    private func getButtonByTag(tag: Int) -> UIButton{
+        switch tag {
+        case 0:
+            return bt1
+        case 1:
+            return bt2
+        case 2:
+            return bt3
+        case 3:
+            return bt4
+        case 4:
+            return bt5
+        case 5:
+            return bt6
+        case 6:
+            return bt7
+        case 7:
+            return bt8
+        default:
+            return UIButton()
         }
     }
 }

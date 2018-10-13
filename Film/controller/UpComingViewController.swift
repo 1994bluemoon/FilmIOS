@@ -1,43 +1,36 @@
 //
-//  HomeViewController.swift
+//  UpComingViewController.swift
 //  Film
 //
-//  Created by Dương Hoàng on 9/21/18.
+//  Created by Dương Hoàng on 10/12/18.
 //  Copyright © 2018 henry. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class UpComingViewController: UIViewController {
+    
     @IBOutlet weak var tbView: UITableView!
     
     var films: [Film] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showNowPlaying()
-        // Do any additional setup after loading the view.
+        showUpcoming()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ChiTietViewController" {
+        if segue.identifier == "ChiTietViewController2" {
             let mh = segue.destination as! ChiTietViewController
             mh.film = sender as! Film
         }
     }
     
-    func showNowPlaying(){
-        films = Film().getNowPlayingFilms()
+    func showUpcoming(){
+        films = Film().getUpcomingFilms()
         tbView.reloadData()
     }
-    
-    func moveToDetail(film: Film){
-        let stb = UIStoryboard(name: "Main", bundle: nil)
-        let detailViewController = stb.instantiateViewController(withIdentifier: "ChiTietViewController") as! ChiTietViewController
-        detailViewController.film = film
-        self.navigationController?.pushViewController(detailViewController, animated: true)
-        print(film.Title ?? "nil")
-    }
+
     /*
     // MARK: - Navigation
 
@@ -47,26 +40,23 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    //54715436e1813692f121feb9fd97709e
 
 }
 
-extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
-    
+extension UpComingViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return films.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemFilmTableViewCell") as! ItemFilmTableViewCell
-        cell.film = films[indexPath.row]
+        cell.film = self.films[indexPath.row]
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ChiTietViewController", sender: self.films[indexPath.row])
-//        self.moveToDetail(film: self.films[indexPath.row])
     }
 }
 
+extension UpComingViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ChiTietViewController2", sender: self.films[indexPath.row])
+    }
+}
