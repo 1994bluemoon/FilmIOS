@@ -9,10 +9,10 @@
 import Foundation
 
 class Film{
-    var Title: String?
-    var Description: String?
-    var LogoPath: String?
-    var BackDropPath: String?
+    var Title: String = ""
+    var Description: String = ""
+    var LogoPath: String = ""
+    var BackDropPath: String = ""
     
     init(title: String, description: String, logoPath: String, backDropPath: String) {
         self.Title = title

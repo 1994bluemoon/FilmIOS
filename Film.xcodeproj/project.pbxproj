@@ -27,6 +27,8 @@
 		1F63FF8521550FD1000D5AC0 /* FilmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF8421550FD1000D5AC0 /* FilmTests.swift */; };
 		1F63FF9021550FD1000D5AC0 /* FilmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FF8F21550FD1000D5AC0 /* FilmUITests.swift */; };
 		1F63FFA421551362000D5AC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F63FFA321551362000D5AC0 /* HomeViewController.swift */; };
+		1FBB10B82174D4EA00CB666D /* PlistFilmData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FBB10B72174D4EA00CB666D /* PlistFilmData.plist */; };
+		1FCCA3402174F8EC0010B4A0 /* FilmPlistLocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCA33F2174F8EC0010B4A0 /* FilmPlistLocalData.swift */; };
 		1FE19CDA2170E67F006B87BD /* UpComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE19CD92170E67F006B87BD /* UpComingViewController.swift */; };
 		1FE19CDC2170E9F6006B87BD /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE19CDB2170E9F6006B87BD /* MainTabBarViewController.swift */; };
 		1FEF1A032157C4D900F4F494 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1A022157C4D900F4F494 /* DetailViewController.swift */; };
@@ -76,6 +78,8 @@
 		1F63FF8F21550FD1000D5AC0 /* FilmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmUITests.swift; sourceTree = "<group>"; };
 		1F63FF9121550FD1000D5AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F63FFA321551362000D5AC0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1FBB10B72174D4EA00CB666D /* PlistFilmData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PlistFilmData.plist; sourceTree = "<group>"; };
+		1FCCA33F2174F8EC0010B4A0 /* FilmPlistLocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmPlistLocalData.swift; sourceTree = "<group>"; };
 		1FE19CD92170E67F006B87BD /* UpComingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingViewController.swift; sourceTree = "<group>"; };
 		1FE19CDB2170E9F6006B87BD /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		1FEF1A022157C4D900F4F494 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 		1F63FF6321550FCC000D5AC0 = {
 			isa = PBXGroup;
 			children = (
+				1FCCA33E2174F8C60010B4A0 /* singleton */,
+				1FCCA33D2174F8850010B4A0 /* data */,
 				1F63FF6E21550FCC000D5AC0 /* Film */,
 				1F63FF8321550FD1000D5AC0 /* FilmTests */,
 				1F63FF8E21550FD1000D5AC0 /* FilmUITests */,
@@ -189,6 +195,22 @@
 				1F63FF9121550FD1000D5AC0 /* Info.plist */,
 			);
 			path = FilmUITests;
+			sourceTree = "<group>";
+		};
+		1FCCA33D2174F8850010B4A0 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				1FBB10B72174D4EA00CB666D /* PlistFilmData.plist */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		1FCCA33E2174F8C60010B4A0 /* singleton */ = {
+			isa = PBXGroup;
+			children = (
+				1FCCA33F2174F8EC0010B4A0 /* FilmPlistLocalData.swift */,
+			);
+			path = singleton;
 			sourceTree = "<group>";
 		};
 		1FEF1A012157C49600F4F494 /* controller */ = {
@@ -311,6 +333,7 @@
 			files = (
 				1F63FF7A21550FD1000D5AC0 /* LaunchScreen.storyboard in Resources */,
 				1F63FF7721550FD1000D5AC0 /* Assets.xcassets in Resources */,
+				1FBB10B82174D4EA00CB666D /* PlistFilmData.plist in Resources */,
 				1F63FF7521550FCC000D5AC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +377,7 @@
 				1F499FBD215919CF00D0D3A2 /* ChiTietViewController.swift in Sources */,
 				1F1AAA9D2164F5090043360B /* CellTinhTableViewCell.swift in Sources */,
 				1F1AAA952164E5410043360B /* DMyDelegate.swift in Sources */,
+				1FCCA3402174F8EC0010B4A0 /* FilmPlistLocalData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

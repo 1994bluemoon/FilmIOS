@@ -85,13 +85,13 @@ extension ChiTietViewController: UITableViewDataSource {
                 if(self.film.BackDropPath == ""){
                     cell.imBanner.image = UIImage(named: "banner")
                 } else{
-                    cell.imBanner.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(self.film.BackDropPath ?? "")")!, withPlaceholder: cell.imBanner.image)
+                    cell.imBanner.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(self.film.BackDropPath)")!, withPlaceholder: cell.imBanner.image)
                 }
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TitleTableViewCell") as! TitleTableViewCell
                 cell.lbTitle.text = self.film.Title
-                cell.imPoster.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(self.film.LogoPath ?? "")")!, withPlaceholder: cell.imPoster.image)
+                cell.imPoster.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(self.film.LogoPath)")!, withPlaceholder: cell.imPoster.image)
                 cell.myDelegate = self
                 return cell
             default:

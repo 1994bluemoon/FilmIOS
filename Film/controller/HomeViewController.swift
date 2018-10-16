@@ -15,6 +15,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        if let path = Bundle.main.path(forResource: "demoPlist", ofType: "plist"){
+//            let data = NSDictionary(contentsOfFile: path)
+//            print(data!["Name"])
+//        }
+        
         showNowPlaying()
         // Do any additional setup after loading the view.
     }
@@ -27,7 +33,8 @@ class HomeViewController: UIViewController {
     }
     
     func showNowPlaying(){
-        films = Film().getNowPlayingFilms()
+        //films = Film().getNowPlayingFilms()
+        films = FilmPlistLocalData.share.getNowPlaying()
         tbView.reloadData()
     }
     
@@ -36,7 +43,7 @@ class HomeViewController: UIViewController {
         let detailViewController = stb.instantiateViewController(withIdentifier: "ChiTietViewController") as! ChiTietViewController
         detailViewController.film = film
         self.navigationController?.pushViewController(detailViewController, animated: true)
-        print(film.Title ?? "nil")
+        print(film.Title)
     }
     /*
     // MARK: - Navigation

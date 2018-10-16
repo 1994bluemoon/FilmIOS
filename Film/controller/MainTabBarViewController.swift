@@ -9,11 +9,13 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController {
+    
+    var main = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Do any additional setup after loading the view.
     }
     
 

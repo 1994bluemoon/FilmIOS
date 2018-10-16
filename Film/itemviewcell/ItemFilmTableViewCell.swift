@@ -14,17 +14,18 @@ class ItemFilmTableViewCell: UITableViewCell {
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var imLogo: UIImageView!
     
-    var film: Film?{
+    var film: Film = Film() {
         didSet{
             self.updateUI()
         }
     }
     
     func updateUI(){
-        self.lbTitle.text = film?.Title
-        self.lbDes.text = film?.Description
+        self.lbTitle.text = film.Title
+        self.lbDes.text = film.Description
         let placeholder: UIImage? = imLogo.image
-        self.imLogo.setImage(from : URL(string: "https://image.tmdb.org/t/p/w500\(film?.LogoPath ?? "aa")")!, withPlaceholder: placeholder)
+        let url = URL(string: "https://image.tmdb.org/t/p/w500\(film.LogoPath)")
+        self.imLogo.setImage(from : url!, withPlaceholder: placeholder)
     }
 
 }

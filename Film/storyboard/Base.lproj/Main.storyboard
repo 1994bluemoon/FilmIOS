@@ -292,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYF-fQ-GIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="-671"/>
+            <point key="canvasLocation" x="1226" y="-1424"/>
         </scene>
         <!--Chi tiết phim-->
         <scene sceneID="KEz-oy-ZkP">
@@ -1103,7 +1103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7C-qu-m8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2460" y="-672"/>
+            <point key="canvasLocation" x="2236" y="-1424"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5eS-VD-hhd">
