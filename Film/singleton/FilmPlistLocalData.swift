@@ -11,21 +11,21 @@ import Foundation
 class FilmPlistLocalData {
     
     static let share = FilmPlistLocalData()
-    private var films: [String: [[String: String]]] = [:]
+    private var films: [String: Any] = [:]
 
     private init() {
         films = getNSDictionary(resource: "PlistFilmData")
     }
     
     func getFilmData(byKey: String) -> [Film] {
-        guard let array = films[byKey] else { return [] }
+        guard let array = films[byKey] as? [[String:String]] else { return [] }
         return convertDicToFilm(films: array)
     }
     
-    private func getNSDictionary(resource: String) -> [String:[[String:String]]] {
+    private func getNSDictionary(resource: String) -> [String:Any] {
         if let path = Bundle.main.path(forResource: resource, ofType: "plist") {
-            if NSDictionary(contentsOfFile: path) != nil {
-                return NSDictionary(contentsOfFile: path) as! [String:[[String:String]]]
+            if let dic = NSDictionary(contentsOfFile: path) as? [String:Any] {
+                return dic
             }
         }
         return [:]
