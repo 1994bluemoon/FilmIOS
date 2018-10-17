@@ -11,14 +11,14 @@ import Foundation
 class FilmPlistLocalData {
     
     static let share = FilmPlistLocalData()
+    private var films: [String: [[String: String]]] = [:]
 
     private init() {
-        
+        films = getNSDictionary(resource: "PlistFilmData")
     }
     
-    func getFilmData(fromResourceFile: String, byKey: String) -> [Film] {
-        let resource = getNSDictionary(resource: fromResourceFile)
-        let array = getFilmDicArray(fromResource: resource, byKey: byKey)
+    func getFilmData(byKey: String) -> [Film] {
+        guard let array = films[byKey] else { return [] }
         return convertDicToFilm(films: array)
     }
     
@@ -29,13 +29,6 @@ class FilmPlistLocalData {
             }
         }
         return [:]
-    }
-    
-    private func getFilmDicArray(fromResource: [String:[[String:String]]], byKey: String) -> [[String:String]] {
-        guard let films = fromResource[byKey] else {
-            return []
-        }
-        return films
     }
     
     private func convertDicToFilm(films: [[String:String]]) -> [Film] {

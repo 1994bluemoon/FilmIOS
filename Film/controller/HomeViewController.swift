@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
     
     func showNowPlaying(){
         //films = Film().getNowPlayingFilms()
-        films = FilmPlistLocalData.share.getFilmData(fromResourceFile: "PlistFilmData", byKey: "PhimDangChieu")
+        films = FilmPlistLocalData.share.getFilmData(byKey: "PhimDangChieu")
         tbView.reloadData()
     }
     

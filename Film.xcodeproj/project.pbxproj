@@ -182,17 +182,17 @@
 		1F63FF6E21550FCC000D5AC0 /* Film */ = {
 			isa = PBXGroup;
 			children = (
-				1F5B052F21777686001B8DE5 /* other */,
-				1F5B052E21777636001B8DE5 /* delegate */,
-				1FCCA33E2174F8C60010B4A0 /* singleton */,
-				1FCCA33D2174F8850010B4A0 /* data */,
 				1F63FF6F21550FCC000D5AC0 /* AppDelegate.swift */,
-				1F3272B4215BE5C300492AD3 /* storyboard */,
 				1F63FF7621550FD1000D5AC0 /* Assets.xcassets */,
-				1F63FF7B21550FD1000D5AC0 /* Info.plist */,
 				1FEF1A012157C49600F4F494 /* controller */,
-				1F3272B3215BE56F00492AD3 /* model */,
+				1FCCA33D2174F8850010B4A0 /* data */,
+				1F5B052E21777636001B8DE5 /* delegate */,
+				1F63FF7B21550FD1000D5AC0 /* Info.plist */,
 				1F499FBE21591ADA00D0D3A2 /* itemviewcell */,
+				1F3272B3215BE56F00492AD3 /* model */,
+				1F5B052F21777686001B8DE5 /* other */,
+				1FCCA33E2174F8C60010B4A0 /* singleton */,
+				1F3272B4215BE5C300492AD3 /* storyboard */,
 			);
 			path = Film;
 			sourceTree = "<group>";
