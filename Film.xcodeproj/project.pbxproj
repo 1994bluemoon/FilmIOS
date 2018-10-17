@@ -150,6 +150,15 @@
 			path = delegate;
 			sourceTree = "<group>";
 		};
+		1F5B052F21777686001B8DE5 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */,
+				1FEF1A022157C4D900F4F494 /* DetailViewController.swift */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
 		1F63FF6321550FCC000D5AC0 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +182,7 @@
 		1F63FF6E21550FCC000D5AC0 /* Film */ = {
 			isa = PBXGroup;
 			children = (
+				1F5B052F21777686001B8DE5 /* other */,
 				1F5B052E21777636001B8DE5 /* delegate */,
 				1FCCA33E2174F8C60010B4A0 /* singleton */,
 				1FCCA33D2174F8850010B4A0 /* data */,
@@ -225,9 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				1F63FFA321551362000D5AC0 /* HomeViewController.swift */,
-				1FEF1A022157C4D900F4F494 /* DetailViewController.swift */,
 				1F499FBC215919CF00D0D3A2 /* ChiTietViewController.swift */,
-				1F499FBA21590B2900D0D3A2 /* FakeViewController.swift */,
 				1F1AAA962164E70B0043360B /* BookTicketViewController.swift */,
 				1FE19CD92170E67F006B87BD /* UpComingViewController.swift */,
 				1FE19CDB2170E9F6006B87BD /* MainTabBarViewController.swift */,
