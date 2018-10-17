@@ -21,10 +21,10 @@ class ItemFilmTableViewCell: UITableViewCell {
     }
     
     func updateUI(){
-        self.lbTitle.text = film.Title
-        self.lbDes.text = film.Description
+        self.lbTitle.text = film.title
+        self.lbDes.text = film.description
         let placeholder: UIImage? = imLogo.image
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(film.LogoPath)")
+        let url = URL(string: "https://image.tmdb.org/t/p/w500\(film.logoPath)")
         self.imLogo.setImage(from : url!, withPlaceholder: placeholder)
     }
 

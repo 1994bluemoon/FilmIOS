@@ -54,7 +54,7 @@ class ChiTietViewController: UIViewController, DMyDelegate {
     
     func check(listFilms: [Film], film: Film) -> Bool{
         for temp in listFilms {
-            if temp.Title == film.Title {
+            if temp.title == film.title {
                 return false
             }
         }
@@ -82,21 +82,21 @@ extension ChiTietViewController: UITableViewDataSource {
             switch indexPath.row {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "BannerTableViewCell") as! BannerTableViewCell
-                if(self.film.BackDropPath == ""){
+                if(self.film.backDropPath == ""){
                     cell.imBanner.image = UIImage(named: "banner")
                 } else{
-                    cell.imBanner.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(self.film.BackDropPath)")!, withPlaceholder: cell.imBanner.image)
+                    cell.imBanner.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(self.film.backDropPath)")!, withPlaceholder: cell.imBanner.image)
                 }
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TitleTableViewCell") as! TitleTableViewCell
-                cell.lbTitle.text = self.film.Title
-                cell.imPoster.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(self.film.LogoPath)")!, withPlaceholder: cell.imPoster.image)
+                cell.lbTitle.text = self.film.title
+                cell.imPoster.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(self.film.logoPath)")!, withPlaceholder: cell.imPoster.image)
                 cell.myDelegate = self
                 return cell
             default:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DescriptionTableViewCell") as! DescriptionTableViewCell
-                cell.tvDescription.text = self.film.Description
+                cell.tvDescription.text = self.film.description
                 return cell
             }
         } else {

@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
     
     func showNowPlaying(){
         //films = Film().getNowPlayingFilms()
-        films = FilmPlistLocalData.share.getNowPlaying()
+        films = FilmPlistLocalData.share.getFilmData(fromResourceFile: "PlistFilmData", byKey: "PhimDangChieu")
         tbView.reloadData()
     }
     
@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
         let detailViewController = stb.instantiateViewController(withIdentifier: "ChiTietViewController") as! ChiTietViewController
         detailViewController.film = film
         self.navigationController?.pushViewController(detailViewController, animated: true)
-        print(film.Title)
+        print(film.title)
     }
     /*
     // MARK: - Navigation

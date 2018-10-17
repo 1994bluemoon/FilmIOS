@@ -141,11 +141,18 @@
 			path = itemviewcell;
 			sourceTree = "<group>";
 		};
+		1F5B052E21777636001B8DE5 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1F35A053216793AF0005C9DA /* FilmTicketDelegate.swift */,
+				1F1AAA942164E5410043360B /* DMyDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
 		1F63FF6321550FCC000D5AC0 = {
 			isa = PBXGroup;
 			children = (
-				1FCCA33E2174F8C60010B4A0 /* singleton */,
-				1FCCA33D2174F8850010B4A0 /* data */,
 				1F63FF6E21550FCC000D5AC0 /* Film */,
 				1F63FF8321550FD1000D5AC0 /* FilmTests */,
 				1F63FF8E21550FD1000D5AC0 /* FilmUITests */,
@@ -166,6 +173,9 @@
 		1F63FF6E21550FCC000D5AC0 /* Film */ = {
 			isa = PBXGroup;
 			children = (
+				1F5B052E21777636001B8DE5 /* delegate */,
+				1FCCA33E2174F8C60010B4A0 /* singleton */,
+				1FCCA33D2174F8850010B4A0 /* data */,
 				1F63FF6F21550FCC000D5AC0 /* AppDelegate.swift */,
 				1F3272B4215BE5C300492AD3 /* storyboard */,
 				1F63FF7621550FD1000D5AC0 /* Assets.xcassets */,
@@ -173,8 +183,6 @@
 				1FEF1A012157C49600F4F494 /* controller */,
 				1F3272B3215BE56F00492AD3 /* model */,
 				1F499FBE21591ADA00D0D3A2 /* itemviewcell */,
-				1F1AAA942164E5410043360B /* DMyDelegate.swift */,
-				1F35A053216793AF0005C9DA /* FilmTicketDelegate.swift */,
 			);
 			path = Film;
 			sourceTree = "<group>";

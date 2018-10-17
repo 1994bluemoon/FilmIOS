@@ -93,15 +93,15 @@
             </objects>
             <point key="canvasLocation" x="598" y="-9"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Sắp chiếu-->
         <scene sceneID="ugh-Wv-eam">
             <objects>
                 <navigationController id="P8d-vr-rbl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="hUS-P2-e5n"/>
+                    <tabBarItem key="tabBarItem" title="Sắp chiếu" image="upcoming" id="hUS-P2-e5n"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z9k-jG-w08">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="0.61076081941033855" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="hai-i9-dDx" kind="relationship" relationship="rootViewController" id="qcc-tH-Rd0"/>
@@ -1105,11 +1105,11 @@
             </objects>
             <point key="canvasLocation" x="2236" y="-1424"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Đang chiếu-->
         <scene sceneID="5eS-VD-hhd">
             <objects>
                 <navigationController id="ODd-vc-s9T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="gON-4w-rf1"/>
+                    <tabBarItem key="tabBarItem" title="Đang chiếu" image="nowplaying" id="gON-4w-rf1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jHb-7a-DN9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1144,6 +1144,10 @@
             <point key="canvasLocation" x="-1439" y="471"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nowplaying" width="30" height="30"/>
+        <image name="upcoming" width="29" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4ay-4l-7QO"/>
     </inferredMetricsTieBreakers>

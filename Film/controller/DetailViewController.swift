@@ -25,14 +25,14 @@ class DetailViewController: UIViewController {
     }
     
     func bindDataToView(){
-        if(film?.BackDropPath == ""){
+        if(film?.backDropPath == ""){
             imBanner.image = UIImage(named: "banner")
         } else{
-            imBanner.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(film?.BackDropPath ?? "aa")")!, withPlaceholder: imBanner.image)
+            imBanner.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(film?.backDropPath ?? "aa")")!, withPlaceholder: imBanner.image)
         }
-        imPoster.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(film?.LogoPath ?? "defaul")")!, withPlaceholder: imPoster.image)
-        lbTitle.text = film?.Title
-        tvContent.text = film?.Description
+        imPoster.setImage(from: URL(string: "https://image.tmdb.org/t/p/w500\(film?.logoPath ?? "defaul")")!, withPlaceholder: imPoster.image)
+        lbTitle.text = film?.title
+        tvContent.text = film?.description
     }
 
     @IBAction func goBack(_ sender: Any) {

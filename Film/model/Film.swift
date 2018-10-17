@@ -9,16 +9,27 @@
 import Foundation
 
 class Film{
-    var Title: String = ""
-    var Description: String = ""
-    var LogoPath: String = ""
-    var BackDropPath: String = ""
+    var title: String = ""
+    var description: String = ""
+    var logoPath: String = ""
+    var backDropPath: String = ""
+    var rating: String = ""
+    var releaseDate: String = ""
     
     init(title: String, description: String, logoPath: String, backDropPath: String) {
-        self.Title = title
-        self.Description = description
-        self.LogoPath = logoPath
-        self.BackDropPath = backDropPath
+        self.title = title
+        self.description = description
+        self.logoPath = logoPath
+        self.backDropPath = backDropPath
+    }
+    
+    init(filmDic : [String:String]) {
+        self.title = filmDic["title"] ?? ""
+        self.description = filmDic["description"] ?? ""
+        self.logoPath = filmDic["logoPath"] ?? ""
+        self.backDropPath = filmDic["backDropPath"] ?? ""
+        self.rating = filmDic["rating"] ?? ""
+        self.releaseDate = filmDic["releaseDate"] ?? ""
     }
     
     init() {

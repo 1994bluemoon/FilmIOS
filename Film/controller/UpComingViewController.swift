@@ -28,7 +28,7 @@ class UpComingViewController: UIViewController {
     
     func showUpcoming(){
         //films = Film().getUpcomingFilms()
-        films = FilmPlistLocalData.share.getUpComming()
+        films = FilmPlistLocalData.share.getFilmData(fromResourceFile: "PlistFilmData", byKey: "PhimSapChieu")
         tbView.reloadData()
     }
 
