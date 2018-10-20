@@ -8,72 +8,32 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: FilmParentViewController {
+    
     @IBOutlet weak var tbView: UITableView!
     
-    var films: [Film] = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        if let path = Bundle.main.path(forResource: "demoPlist", ofType: "plist"){
-//            let data = NSDictionary(contentsOfFile: path)
-//            print(data!["Name"])
-//        }
-        
-        showNowPlaying()
-        // Do any additional setup after loading the view.
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ChiTietViewController" {
-            let mh = segue.destination as! ChiTietViewController
-            mh.film = sender as! Film
-        }
-    }
-    
-    func showNowPlaying(){
-        //films = Film().getNowPlayingFilms()
-        films = FilmPlistLocalData.share.getFilmData(byKey: "PhimDangChieu")
+    override func loadFilmData() {
+        super.films = FilmPlistLocalData.share.getFilmData(byKey: "PhimDangChieu")
         tbView.reloadData()
     }
     
-    func moveToDetail(film: Film){
-        let stb = UIStoryboard(name: "Main", bundle: nil)
-        let detailViewController = stb.instantiateViewController(withIdentifier: "ChiTietViewController") as! ChiTietViewController
-        detailViewController.film = film
-        self.navigationController?.pushViewController(detailViewController, animated: true)
-        print(film.title)
+    override func performCellFilmClicked(film: Film) {
+        super.indentify = "ChiTietViewController"
+        super.performCellFilmClicked(film: film)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+//   func moveToDetail(film: Film){
+//       let stb = UIStoryboard(name: "Main", bundle: nil)
+//       let detailViewController = stb.instantiateViewController(withIdentifier: "ChiTietViewController") as! ChiTietViewController
+//       detailViewController.film = film
+//       self.navigationController?.pushViewController(detailViewController, animated: true)
+//       print(film.title)
+//   }
     
     //54715436e1813692f121feb9fd97709e
 
 }
 
-extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return films.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemFilmTableViewCell") as! ItemFilmTableViewCell
-        cell.film = films[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ChiTietViewController", sender: self.films[indexPath.row])
-//        self.moveToDetail(film: self.films[indexPath.row])
-    }
-}
+// xây dựng 1 class thí sinh có những pro sau: mã, tên , nsinh, điểm toán, văn, anh
+// nhập vào  n thí sinh in ra thí sinh có kết quả tổng điểm lớn hơn 15 trong đó biết cách tính điểm (toán hs 2), xuất ra điểm thí sinh có tổng điểm lớn hơn 15 và môn toán dưới 5
 

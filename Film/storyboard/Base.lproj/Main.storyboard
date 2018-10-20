@@ -85,7 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Phim đang chiếu" leftItemsSupplementBackButton="YES" id="0QM-GE-lXM"/>
                     <connections>
-                        <outlet property="tbView" destination="RqN-qt-TmV" id="rT8-sg-Pcx"/>
+                        <outlet property="tbView" destination="RqN-qt-TmV" id="eSX-hG-o19"/>
                         <segue destination="mkY-GJ-DLR" kind="show" identifier="ChiTietViewController" id="4ay-4l-7QO"/>
                     </connections>
                 </viewController>
